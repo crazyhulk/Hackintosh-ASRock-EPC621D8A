@@ -14,8 +14,7 @@
 
 - 操作系统版本：macOS Catalina 10.15.4
 - OpenCore 版本：0.59
-- RX580：正常。原生驱动。
-- USB：前面板仅保留3.0接口，后面板只留了TypeC接口，请自行修改`kexts/USBPorts.kext`
+- RX590：正常。原生驱动。
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
 
