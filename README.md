@@ -18,6 +18,9 @@
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
 
+### 2020-07-25 Update
+- 把原来的 `Devcie (CPXX) => Device (PRXX)` `_STA => XSTA` 让 SSDT 的 `Processor (CPXX)` 做替换
+
 ### 2020-07-24 Update
 - 更新 BIOS 后会卡 ACPI，因为新的 DSDT 中的`Processor (CPXX)` => `Device (CPXX)` 而hackintosh 是要识别 Processor 关键字的
     之前的做法是修改原来的 DSDT，但是不太优雅，现在由 Processor 的 ssdt 代劳
