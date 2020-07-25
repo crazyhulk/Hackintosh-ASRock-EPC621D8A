@@ -75,6 +75,20 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Rename Device(CPxx) to Device(PRxx)</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>SQxDUA==</data>
+				<key>Replace</key>
+				<data>SQxQUg==</data>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Rename XHCI to XHC (USB)</string>
 				<key>Enabled</key>
 				<false/>
