@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>16G29</string>
+	<string>17G65</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>6.26.1440</string>
+	<string>6.26-357-gceb835ea.1800</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1440</string>
+	<string>1800</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -33,9 +33,9 @@
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>16E185</string>
+	<string>12D75</string>
 	<key>DTSDKName</key>
-	<string>macosx10.12</string>
+	<string>macosx10.8</string>
 	<key>DTXcode</key>
 	<string>0833</string>
 	<key>DTXcodeBuild</key>
@@ -843,6 +843,7 @@
 			<string>LPCSensors</string>
 			<key>IONameMatch</key>
 			<array>
+				<string>ITE,IT8628E</string>
 				<string>ITE,IT8512F</string>
 				<string>ITE,IT8505F</string>
 				<string>ITE,IT8712F</string>
@@ -2998,6 +2999,8 @@
 				<string>Nuvoton,NCT6791D</string>
 				<string>Nuvoton,NCT6792D</string>
 				<string>Nuvoton,NCT6793D</string>
+				<string>Nuvoton,NCT6795D</string>
+				<string>Nuvoton,NCT6796D</string>
 			</array>
 			<key>IOProbeScore</key>
 			<string>3000</string>
@@ -5168,7 +5171,7 @@
 		<key>org.netkas.driver.FakeSMC</key>
 		<string>1429</string>
 	</dict>
-	<key>OSBundleRequired</key>
-	<string>Root</string>
+	<key>Source Code</key>
+	<string>"https://github.com/RehabMan/OS-X-FakeSMC-kozlek.git"</string>
 </dict>
 </plist>
