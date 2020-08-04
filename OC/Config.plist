@@ -848,7 +848,7 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>F5K910802J900001H</string>
+			<string>F5K910802J900002H</string>
 			<key>ROM</key>
 			<data>ESIzAAAA</data>
 			<key>SpoofVendor</key>
@@ -856,9 +856,9 @@
 			<key>SystemProductName</key>
 			<string>MacPro7,1</string>
 			<key>SystemSerialNumber</key>
-			<string>F5KYDWYTP7QM</string>
+			<string>F5KYDWYTP8QM</string>
 			<key>SystemUUID</key>
-			<string>482D8999-720E-40E4-9DDC-7C02DC9BAD21</string>
+			<string>482D8999-720E-40E4-9DDC-7C02DC9BAD22</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
