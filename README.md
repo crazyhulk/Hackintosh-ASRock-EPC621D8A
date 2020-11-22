@@ -12,11 +12,18 @@
 
 ## 软件说明
 
-- 操作系统版本：macOS Catalina 10.15.4
-- OpenCore 版本：0.59
+- 操作系统版本：macOS big Sur 11.0.1
+- OpenCore 版本：0.6.3
 - RX590：正常。原生驱动。
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
+
+### 2020-11-22 Update
+- 支持 big sur
+- 新添加 SSDT-RTC0-RANGE.aml, 解决 RTC 问题
+- 默认使用 FakeSMC ，按需选择 VirtualSMC
+- NVMeFix 按需选用，我有一颗不支持的 SSD 加了启动参数
+- 机型信息等自己选用，自用的是 MacPro7,1 会有内存报错弹窗(memory modules misconfigured)
 
 ### 2020-07-25 Update
 - 把原来的 `Devcie (CPXX) => Device (PRXX)` `_STA => XSTA` 让 SSDT 的 `Processor (CPXX)` 做替换
@@ -35,8 +42,6 @@ OpenCore的思路是，通过完善ACPI表与UEFI固件来运行macOS：
 
 - 一方面，通过修改ACPI表，可以让硬件的描述与操作方式符合苹果的ACPI规范，从而macOS可以正确的识别和操作硬件。
 - 另一方面，通过修改UEFI固件，可以提供一些固件原本没有而macOS需要使用的方法，或者将现有方法改造为macOS可以调用的接口。
-
-这类似于从Docker到Kubernates的转变，从方法论的角度进行了总结，给出了黑果发展的方向。
 
 OpenCore官方([这里](https://github.com/acidanthera/OpenCorePkg))提供了非常详尽的文档，建议阅读Configuration.pdf即知道每个配置项的存在的意义和作用了，待有时间再补充详细修改的地方。
 
