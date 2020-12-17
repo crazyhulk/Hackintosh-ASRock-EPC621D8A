@@ -12,15 +12,15 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-DTGP.aml</string>
+				<string>SSDT-APCPU.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fix EC and USB Power</string>
+				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
+				<string>SSDT-fix.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -30,137 +30,11 @@
 				<key>Path</key>
 				<string>NOBR1A.aml</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-PROCESSOR</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PROCESSOR.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>fix rtc</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-RTC0-RANGE.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>plugin-type=1</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-PLUG.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-GPRW</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-GPRW.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-SBUS-MCHC</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-SBUS-MCHC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-UIAC</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-UIAC.aml</string>
-			</dict>
 		</array>
 		<key>Delete</key>
 		<array/>
 		<key>Patch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Rename _STA to XSTA in Device(CPxx)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>X1NUQQCgD5NDU1RB</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>WFNUQQCgD5NDU1RB</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Rename Device(CPxx) to Device(PRxx)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>SQxDUA==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>SQxQUg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>R1BSVwI=</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>WFBSVwI=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Rename XHCI to XHC (USB)</string>
@@ -990,7 +864,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>alcid=1 keepsyms=1 swd_panic=1 nand-io-timeoutms=1000</string>
+				<string>alcid=1 keepsyms=1 debug=0x100 swd_panic=1 nand-io-timeoutms=1000</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1052,6 +926,27 @@
 		<true/>
 		<key>CustomMemory</key>
 		<false/>
+		<key>Generic</key>
+		<dict>
+			<key>AdviseWindows</key>
+			<false/>
+			<key>MLB</key>
+			<string>F5K910804J900004H</string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
+			<key>ROM</key>
+			<data>ESIzAAAA</data>
+			<key>SpoofVendor</key>
+			<true/>
+			<key>SystemProductName</key>
+			<string>MacPro7,1</string>
+			<key>SystemSerialNumber</key>
+			<string>F5KYDWYTP7QM</string>
+			<key>SystemUUID</key>
+			<string>482D9001-720E-40E4-9DDC-7C02DC9BAD21</string>
+		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
 		<key>UpdateNVRAM</key>
