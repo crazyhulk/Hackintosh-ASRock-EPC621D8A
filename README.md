@@ -12,8 +12,8 @@
 
 ## 软件说明
 
-- 操作系统版本：macOS Catalina 10.15.4
-- OpenCore 版本：0.59
+- 操作系统版本：macOS Catalina 11.1
+- OpenCore 版本：0.65
 - RX590：正常。原生驱动。
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
@@ -29,8 +29,6 @@ OpenCore的思路是，通过完善ACPI表与UEFI固件来运行macOS：
 - 一方面，通过修改ACPI表，可以让硬件的描述与操作方式符合苹果的ACPI规范，从而macOS可以正确的识别和操作硬件。
 - 另一方面，通过修改UEFI固件，可以提供一些固件原本没有而macOS需要使用的方法，或者将现有方法改造为macOS可以调用的接口。
 
-这类似于从Docker到Kubernates的转变，从方法论的角度进行了总结，给出了黑果发展的方向。
-
 OpenCore官方([这里](https://github.com/acidanthera/OpenCorePkg))提供了非常详尽的文档，建议阅读Configuration.pdf即知道每个配置项的存在的意义和作用了，待有时间再补充详细修改的地方。
 
 ## 致谢
@@ -39,6 +37,5 @@ OpenCore官方([这里](https://github.com/acidanthera/OpenCorePkg))提供了非
 - [Apple](https://www.apple.com)：研发的 macOS 系统
 - [Clover EFI bootloader](https://sourceforge.net/projects/cloverefiboot/)：强大的通用操作系统引导器
 - @[**vit9696**](https://github.com/vit9696)：制作 Lilu & AppleALC
-- @[**glasgood**](https://www.insanelymac.com/forum/profile/1077361-glasgood/)：写了一篇详细的Aorus Pro WiFi主板安装教程，见[这里](https://www.insanelymac.com/forum/topic/337837-glasgoods-macos-mojave-successguide-for-aorus-z390-pro/)
 - @[**cfmwan**](http://i.pcbeta.com/space-uid-8977.html)：分享的其EFI，其中有制作的修复睡眠、USB等功能的SSDT，见[这里](http://bbs.pcbeta.com/viewthread-1832693-1-1.html)
 - [远景论坛](http://bbs.pcbeta.com) & [InsanelyMac](http://www.insanelymac.com)：提供交流的场所
