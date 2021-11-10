@@ -12,8 +12,8 @@
 
 ## 软件说明
 
-- 操作系统版本：macOS Catalina 11.5.2
-- OpenCore 版本：0.7.3
+- 操作系统版本：macOS Monterey 12.0.1
+- OpenCore 版本：0.7.5
 - RX590：正常。原生驱动。
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
