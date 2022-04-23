@@ -12,11 +12,20 @@
 
 ## 软件说明
 
-- 操作系统版本：macOS Monterey 12.0.1
-- OpenCore 版本：0.7.5
+- 操作系统版本：macOS Monterey 12.1
+- OpenCore 版本：0.8.0
 - RX590：正常。原生驱动。
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
+- CPU 名称已经被自定义, 请自行调整或者删除 NVRAM.4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102.revcpuname
+
+## OpenCore 的更新
+
+-  推荐[OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools/), 手动更新太麻烦
+
+## 可能存在的问题
+
+- 偶尔语音通话后会出现杂音。
 
 ## BIOS：关于 BIOS 的版本
 
