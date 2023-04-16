@@ -5,16 +5,16 @@
 - 主板：Asrock EPC621D8A 
 - BIOS版本：C621D8A2.15E 感谢[远景](bbs.pcbeta.com) @prmvb 提供
 - CPU：Intel GOLD 6278 (LGA3647)
-- 显卡：Sapphire Radeon Nitro+ RX 590 Special Edition
+- 显卡：AMD 6950xt
 - 内存：Samsung 32G x 2
-- 硬盘：1. Intel P4500 for windows 2. C2000 pro for Mac OS
+- 硬盘：1. Intel P4500 for windows 2. C2000 pro for Mac OS 3.WD750 2T
 - 网卡：BCM943602CS
 
 ## 软件说明
 
-- 操作系统版本：macOS Monterey 12.1
-- OpenCore 版本：0.8.0
-- RX590：正常。原生驱动。
+- 操作系统版本：macOS Ventura 13.2.1
+- OpenCore 版本：0.9.1
+- RX6950 XT：仿冒 6900xt。
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
 - CPU 名称已经被自定义, 请自行调整或者删除 NVRAM.4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102.revcpuname
@@ -29,7 +29,7 @@
 
 ## BIOS：关于 BIOS 的版本
 
-如果你没有像我一样刷提供的 BIOS，请开启 AppleCpuPmCfgLock 和 AppleXcpmCfgLock， 并且移除 DSDT.aml
+如果你没有像我一样刷提供的 BIOS，请开启 AppleCpuPmCfgLock 和 AppleXcpmCfgLock， 并且移除 DSDT.aml, 不建议刷 BIOS，没有完全 PATCH.
 
 ## 为何使用 OpenCore
 
