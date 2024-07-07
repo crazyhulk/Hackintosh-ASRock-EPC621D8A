@@ -1,19 +1,24 @@
 # Hackintosh
 
+## 2024-06-07 更新
+
+- 更新了支持  Resizable Bar 的 BIOS
+- BIOS 支持解锁 CFG Lock 但是重启失效
+
 ## 硬件配置
 
 - 主板：Asrock EPC621D8A 
 - BIOS版本：C621D8A2.15E 感谢[远景](bbs.pcbeta.com) @prmvb 提供
 - CPU：Intel GOLD 6278 (LGA3647)
 - 显卡：AMD 6950xt
-- 内存：Samsung 32G x 2
+- 内存：Samsung 32G x 4
 - 硬盘：1. Intel P4500 for windows 2. C2000 pro for Mac OS 3.WD750 2T
-- 网卡：BCM943602CS
+- 网卡：Intel AX210 (隔空投送有问题)
 
 ## 软件说明
 
-- 操作系统版本：macOS Ventura 13.2.1
-- OpenCore 版本：0.9.1
+- 操作系统版本：macOS Sonoma 14.5
+- OpenCore 版本：1.0.0
 - RX6950 XT：仿冒 6900xt。
 - SSD Trim：正常。
 - 有个ssdt需要注意，Mac OS 需要屏蔽 P4500 参见 NOBR1A.aml, 但是你们可能不需要，或者跟我插的不是同一个 PCIE 接口，需要注意。
@@ -23,20 +28,13 @@
 
 -  推荐[OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools/), 手动更新太麻烦
 
-## 可能存在的问题
+## 存在的问题
 
-- 偶尔语音通话后会出现杂音。
+- 睡眠不正常
 
 ## BIOS：关于 BIOS 的版本
 
 如果你没有像我一样刷提供的 BIOS，请开启 AppleCpuPmCfgLock 和 AppleXcpmCfgLock， 并且移除 DSDT.aml, 不建议刷 BIOS，没有完全 PATCH.
-
-## 为何使用 OpenCore
-
-OpenCore的思路是，通过完善ACPI表与UEFI固件来运行macOS：
-
-- 一方面，通过修改ACPI表，可以让硬件的描述与操作方式符合苹果的ACPI规范，从而macOS可以正确的识别和操作硬件。
-- 另一方面，通过修改UEFI固件，可以提供一些固件原本没有而macOS需要使用的方法，或者将现有方法改造为macOS可以调用的接口。
 
 OpenCore官方([这里](https://github.com/acidanthera/OpenCorePkg))提供了非常详尽的文档，建议阅读Configuration.pdf即知道每个配置项的存在的意义和作用了，待有时间再补充详细修改的地方。
 
